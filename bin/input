@@ -1,0 +1,4 @@
+add 3 10
+sub 4 10
+mult 4 10
+div 100 0

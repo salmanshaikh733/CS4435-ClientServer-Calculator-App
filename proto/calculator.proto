@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package calculator;
+option go_package = "calculator/proto/calculator";
+
+service Sum {
+
+  rpc Addition (CalculationRequest) returns (CalculationResponse) {}
+
+  rpc Subtraction (CalculationRequest) returns (CalculationResponse) {}
+
+  rpc Multiplication (CalculationRequest) returns (CalculationResponse) {}
+
+  rpc Division (CalculationRequest) returns (CalculationResponse) {}
+}
+
+message CalculationRequest {
+  int64 int1=1;
+  int64 int2=2;
+}
+
+message CalculationResponse {
+  int64 result = 2;
+}
+
